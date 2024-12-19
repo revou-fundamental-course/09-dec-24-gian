@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -12,9 +12,9 @@
         <div class="home-icon"></div>
 
         <nav>
-            <a href="#content-header">Home</a>
+            <a href="#home-section">Home</a>
             <a href="#our-packages-section">Our Packages</a>
-            <a href="http://">Call Us</a>
+            <a href="#call-us-section">Call Us</a>
         </nav>
     </header>
 
@@ -27,51 +27,131 @@
         </header>
 
         <!--home content-->
-        <section class="main-container">
+        <section class="main-container" id="home-section">
             <!-- banner autoslide content -->
             <aside class="main-item">
-                <div class="banner-img"></div><br>
-                <p style="font-size: 20px;">"Liburan jadi menyenangkan bersama Travel Agentku."</p>
-                <i class="glyphicon glyphicon-user" style="font-size: 24px;"></i>
+                <div class="banner-img banner-1"></div>
+                <div class="banner-img banner-2"></div>
+                <div class="banner-img banner-3"></div>
+
+                <div class="review"><i>"Liburan jadi menyenangkan bersama Travel Agentku."</i></div>
+                <div class="profile">
+                    <div class="profile-image"></div>
+                    <div class="profile-info">
+                        <p class="name">Ian</p>
+                        <p class="details">Mahasiswa, 22</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="info">
+                    <p class="description">
+                        <b>Mari liburan bersama kami! 
+                            Biarkan kami yang merancang perjalanan Anda dengan mudah dan nyaman.</b>
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <div class="number">1</div>
+                            <p>Tentukan destinasi yang Anda inginkan.</p>
+                        </li>
+                        <li>
+                            <div class="number">2</div>
+                            <p>Pilih preverensi perjalanan Anda.</p>
+                        </li>
+                        <li>
+                            <div class="number">3</div>
+                            <p>Duduk santai, kami akan mengurus semuanya untuk Anda!</p>
+                        </li>
+                    </ul>
+                </div>
             </aside>
 
             <!-- form contact us -->
-            <form class="main-item contact-form">
-                <div class="form-container">
-                    <h3>Contact Us</h3>
-                    <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p>
-                    <br>
-
-                    <label for="fname">Your Name:</label>
-                    <input type="text" id="fname" name="fullname" placeholder="First and last name">
-                    
-                    <label for="email">Email Address:</label>
-                    <input type="text" id="email" name="email" placeholder="example@email.com">
-                    
-                    <label for="destination">What are you interested in?</label>
-                    <select id="destination" name="destination">
-                        <option selected>Select option</option>
-                        <option value="bali">Bali</option>
-                        <option value="bandung">Bandung</option>
-                        <option value="japan">Japan</option>
-                        <option value="singapore">Singapore</option>
-                        <option value="Surabaya">Surabaya</option>
-                        <option value="thailand">Thailand</option>
-                    </select>
-                    <input type="submit" value="Send">
-                </div>
+            <form class="main-item">
+                <h3>Contact Us</h3>
+                <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima.</p><br>
+                <label for="fullname-input">Your Name:</label><br>
+                <input type="text" id="fullname-input" placeholder="First and last name" required/><br>
+                
+                <label for="email">Email Address:</label><br>
+                <input type="text" id="email-input" placeholder="example@email.com" required/><br>
+                
+                <label for="destination">What are you interested in?</label><br>
+                <select id="destination-input">
+                    <option selected>Select option</option>
+                    <option value="bali">Bali</option>
+                    <option value="bandung">Bandung</option>
+                    <option value="japan">Japan</option>
+                    <option value="singapore">Singapore</option>
+                    <option value="surabaya">Surabaya</option>
+                    <option value="thailand">Thailand</option>
+                </select><br>
+                <button type="button" id="submit-btn" onclick="validateForm();">Submit</button>
             </form>
         </section>
-    </main>
 
         <!-- our packages content -->
         <section id="our-packages-section">
             <header class="content-header our-packages-header">
                 <h1>Our Packages</h1>
             </header>
+
+            <article class="content">
+                <div class="main-article">
+                    <div class="features">
+                        <div class="feature-item">
+                            <h3>Bali</h3>
+                            <p>Nikmati berbagai macam budaya dan kuliner di Bali.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Japan</h3>
+                            <p>Nikmati berbagai macam budaya dan kuliner di Japan.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Singapore</h3>
+                            <p>Nikmati berbagai macam budaya dan kuliner di Singapore.</p>
+                        </div>
+                    </div>
+                    <div class="features">
+                        <div class="feature-item">
+                            <h3>Bandung</h3>
+                            <p>Nikmati berbagai macam budaya dan kuliner di Bandung.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Surabaya</h3>
+                            <p>Nikmati berbagai macam budaya dan kuliner di Surabaya.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h3>Thailand</h3>
+                            <p>Nikmati berbagai macam budaya dan kuliner di Thailand.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
         </section>
+
+        <!-- Call us content -->
+         <section id="call-us-section">
+             <header class="content-header our-packages-header">
+                <h1>Call Us</h1>
+            </header>
+
+            <article class="content">
+                <div class="closing-argument">
+                    <h2>Your Closing Argument Headline</h2>
+                    <p>Suspendisse egestas rhoncus urna in bibendum. Donec urna neque, euismod sed justo quis, convallis tincidunt
+                        risus. Phasellus fringilla odio vel erat fringilla.</p>
+                    <button class="cta-button">Call to Action</button>
+                </div>
+            </article>
+         </section>
+    </main>
+
     <footer>
         <span>Made by Ian@2024</span>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
